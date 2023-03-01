@@ -1,25 +1,25 @@
 import React from 'react';
 
-import runningManIcon from '../images/icons/runningManLogo.svg';
-import trophyIcon from '../images/icons/trophy.svg';
-import badge1 from '../images/badges/badge_1.svg';
-import badge2 from '../images/badges/badge_2.svg';
-import badge3 from '../images/badges/badge_3.svg';
-import badge4 from '../images/badges/badge_4.svg';
-import badge5 from '../images/badges/badge_5.svg';
-import badge6 from '../images/badges/badge_6.svg';
-import bingoBadge from '../images/badges/badge_7.svg';
-import badge3Races from '../images/badges/badge_8.svg';
-import badge9 from '../images/badges/badge_9.svg';
-import badge1Race from '../images/badges/badge_10.svg';
-import badge2Races from '../images/badges/badge_11.svg';
-import badge13 from '../images/badges/badge_13.svg';
+import runningManIcon from '../../images/icons/runningManLogo.svg';
+import trophyIcon from '../../images/icons/trophy.svg';
+import badge1 from '../../images/badges/badge_1.svg';
+import badge2 from '../../images/badges/badge_2.svg';
+import badge3 from '../../images/badges/badge_3.svg';
+import badge4 from '../../images/badges/badge_4.svg';
+import badge5 from '../../images/badges/badge_5.svg';
+import badge6 from '../../images/badges/badge_6.svg';
+import bingoBadge from '../../images/badges/badge_7.svg';
+import badge3Races from '../../images/badges/badge_8.svg';
+import badge9 from '../../images/badges/badge_9.svg';
+import badge1Race from '../../images/badges/badge_10.svg';
+import badge2Races from '../../images/badges/badge_11.svg';
+import badge13 from '../../images/badges/badge_13.svg';
 
 import './Achievements.css';
-import { PageHeader } from '../Common/PageHeader/PageHeader';
+import { PageHeader } from '../../Common/PageHeader/PageHeader';
 
 export const Achievements = () => (
-  <div>
+  <div className="page-container--fade-in">
     <PageHeader
       heading="Achievements"
       description="Below you can find the badges that you have won and which you still have left to conquer!"

@@ -29,6 +29,7 @@
   font-size: 12px;
   line-height: 20px;
   color: #283449;
+  margin-bottom: 8px;
 }
 
 .card-column {
@@ -63,4 +64,24 @@
   display: flex;
   margin-top: 8px;
   gap: 16px;
+}
+
+.readmore-button {
+  padding: 7px 12px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: none;
+  cursor: pointer;
+  transition: all .3s;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.readmore-button img {
+  height: 20px;
 }

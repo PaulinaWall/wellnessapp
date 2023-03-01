@@ -8,7 +8,7 @@ import { PageHeader } from '../Common/PageHeader/PageHeader';
 
 export const Relax = () => {
     return (
-        <div>
+        <div className="page-container--fade-in">
             <PageHeader
                 heading="Take a moment"
                 description="Take a break and allow yourself to breathe to relief stress. Breathe in when the circle grows, hold and breathe out when it shrinks"

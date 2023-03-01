@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
 import { Navigation } from './Navigation/Navigation';
-import { Competitions } from './Competitions/Competitions';
-import { Achievements } from './Achievements/Achievements';
+import { Competitions } from './Pages/Competitions/Competitions';
+import { Achievements } from './Pages/Achievements/Achievements';
 import { StartPage } from './Pages/StartPage/StartPage';
 import { WellnessBingo } from './Pages/WellnessBingo/WellnessBingo';
 import { Relax } from './Relax/Relax';

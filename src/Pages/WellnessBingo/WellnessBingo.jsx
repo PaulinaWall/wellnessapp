@@ -38,7 +38,7 @@ export const WellnessBingo = () => {
     {name: "Go to the seaside", checked: false},
     {name: "Call a friend you haven’t talked to in a long time", checked: false},
     {name: "Exercise with a friend", checked: false},
-    {name: "Cheer on your favourite team", checked: false},
+    {name: "Cheer on your favourite team", checked: true},
     {name: "Go for a bicycle ride", checked: false},
     {name: "Do one of your favourite hobbies", checked: false},
     {name: "Go for a walk", checked: false},
@@ -64,7 +64,7 @@ export const WellnessBingo = () => {
   };
 
   return (
-    <>
+    <div className="page-container--fade-in">
       <PageHeader
         heading="Wellness bingo"
         description="Complete the assignment and try to get bingo"
@@ -94,7 +94,7 @@ export const WellnessBingo = () => {
         </div>
         {isBingo && <ConfettiExplosion {...confettiProps} />}
       </div>
-    </>
+    </div>
   );
 };
 

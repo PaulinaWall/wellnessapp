@@ -1,20 +1,21 @@
 import React from 'react';
 
-import runningManLogo from '../images/icons/runningManLogo.svg';
+import runningManLogo from '../../images/icons/runningManLogo.svg';
 import toughestImage from './toughest.svg';
 import malmoloppetImage from './malmoloppet.svg';
 import midnattsloppetImage from './midnattsloppet.svg';
 import varruset from './varruset.svg';
 import copenhagenMarathon from './copenhagenMarathon.svg';
+import readMoreIcon from '../../Common/Button/readMore.svg';
 
-import { PageHeader } from '../Common/PageHeader/PageHeader';
-import { Button } from '../Common/Button/Button';
+import { PageHeader } from '../../Common/PageHeader/PageHeader';
+import { Button } from '../../Common/Button/Button';
 
 import './Competitions.css';
 
 export const Competitions = () => {
 	return (
-    <div>
+    <div className="page-container--fade-in">
       <PageHeader
         heading="Competitions"
         description="Here you can see which competitions are running and races to sign up for"
@@ -55,7 +56,15 @@ export const Competitions = () => {
 							<img src={midnattsloppetImage} alt="midnight-race" />
               				<div className='button-container'>
 								<Button buttonStyle="primary" title="Sign up" />
-								<Button buttonStyle="inline" title="Read more" />
+								<a
+									href="https://midnattsloppet.com/"
+									target="_blank"
+									className="inline readmore-button"
+									rel="noreferrer"
+								>
+									Read more
+									<img src={readMoreIcon} alt="read-more-icon" />
+								</a>
 							</div>
 						</div>
 
@@ -63,7 +72,15 @@ export const Competitions = () => {
 							<p>Toughest</p>
 							<img src={toughestImage} alt="toughest-race" />
 							<div className='button-container'>
-                				<Button buttonStyle="primary" title="Sign up" />
+							<a
+								href="mailto:jens.mansson@eletive.com?subject=Sign me up for Toughest!&body=Hi Jens!%0D%0ASign me up for this race please!"
+								target="_blank"
+								className="primary readmore-button"
+								rel="noreferrer"
+								>
+									Sign up
+								</a>
+								{/* <Button buttonStyle="primary" title="Sign up" /> */}
 								<Button buttonStyle="inline" title="Read more" />
 							</div>
 						</div>
@@ -86,14 +103,14 @@ export const Competitions = () => {
 							</div>
 						</div>
 						
-						<div className='card'>
+						{/* <div className='card'>
 							<p>Köpenhamn marathon</p>
 							<img src={copenhagenMarathon} alt="copenhagen-marathon" />
 							<div className='button-container'>
                 				<Button buttonStyle="primary" title="Sign up" />
 								<Button buttonStyle="inline" title="Read more" />
 							</div>
-						</div>
+						</div> */}
 					</div>
 				</div>
 			</div>

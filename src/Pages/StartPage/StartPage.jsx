@@ -15,7 +15,7 @@ import { PageHeader } from "../../Common/PageHeader/PageHeader";
 export const StartPage = () => {
 
   return (
-    <>
+    <div className="page-container--fade-in">
       <PageHeader
         heading="Welcome, Oskar"
         description="Looking good this week, keep it up!"
@@ -50,14 +50,13 @@ export const StartPage = () => {
           <div className="item-header">
             <div className="title-container">
               <img src={healthIcon} alt="meaningful text" />
-              <span className="title">Calender</span>
+              <span className="title">Calendar</span>
             </div>
             </div>
               <img src={calender} alt="meaningful text" />
           </li>
         </ul>
       </div>
-    </>
-
+    </div>
    );
 };

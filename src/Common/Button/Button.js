@@ -8,7 +8,7 @@ export const Button = ({
   buttonStyle, /* primary, secondary, inline */
   title,
 }) => {
-	return (
+  return (
     <button
       type="button"
       className={`button-base ${buttonStyle}`}
