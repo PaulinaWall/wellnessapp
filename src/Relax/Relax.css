@@ -1,0 +1,9 @@
+.video-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.video-wrapper video {
+    border-radius: 16px;
+}

@@ -33,7 +33,7 @@ export const Navigation = ({
 					}
 				</ul>
 			</div>
-			<img src={currentUserLogo} className="current-user-logo" alt="logo" onClick={() => onItemChange(5)} />
+			<img src={currentUserLogo} className="current-user-logo" alt="logo" onClick={() => onItemChange(6)} />
 		</header>
 	)
 }

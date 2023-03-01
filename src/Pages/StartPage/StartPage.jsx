@@ -9,10 +9,18 @@ import frame2 from "./images/frame2.svg";
 import frame3 from "./images/frame3.svg";
 import calender from "./images/calender.svg";
 
+import { Button } from "../../Common/Button/Button";
+import { PageHeader } from "../../Common/PageHeader/PageHeader";
+
 export const StartPage = () => {
 
   return (
     <div className="container">
+      <PageHeader
+        heading="Welcome, Oskar"
+        description="Looking good this week, keep it up!"
+      />
+
       <ul className="list-container">
         <li className="table-list-item">
           <div className="item-header">
@@ -20,7 +28,7 @@ export const StartPage = () => {
             <img src={healthIcon} alt="meaningful text" />
             <span className="title">Steps this month</span>
             </div>
-            <button className="button">+ Add your steps</button>
+            <Button buttonStyle="primary" title="Add your steps" />
           </div>
           <img src={stepCount} alt="meaningful text" />
           <img src={mapBerlin} alt="meaningful text" />
@@ -32,7 +40,7 @@ export const StartPage = () => {
             <img src={chatBubbleIcon} alt="meaningful text" />
             <span className="title">Wall</span>
           </div>
-            <button className="button">+ Create new post</button>
+            <Button buttonStyle="primary" title="+ Create new post" />
           </div>
           <img src={frame1} alt="meaningful text" />
           <img src={frame2} alt="meaningful text" />
