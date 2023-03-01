@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+
+import { PageHeader } from '../../Common/PageHeader/PageHeader';
 import "./WellnessBingo.css";
 
 export const WellnessBingo = () => {
@@ -48,30 +50,36 @@ export const WellnessBingo = () => {
   };
 
   return (
-    <div className="container">
-     <div className="bingo-container">
-        <div className="bingo-board">
-        {words.map((word) => (
-          word.checked
-          ? <div key={word.name} className="bingo-board-item-success">
-              <span className="bingo-name-title">{word.name}</span>
-            </div>
-          : <div key={word.name} className="bingo-board-item"></div>
-          
-        ))}
-        </div>
-        <div className="bingo-checklist">
-          {bingoWords.map((word) => (
-            <div key={word} className="bingo-checklist-item">
-              <input type="checkbox" onClick={() => handleCheck(word)} />
-              <label>{word}</label>
-            </div>
+    <>
+      <PageHeader
+        heading="Wellness bingo"
+        description="Complete the assignment and try to get bingo"
+      />
+      <div className="container">
+      
+      <div className="bingo-container">
+          <div className="bingo-board">
+          {words.map((word) => (
+            word.checked
+            ? <div key={word.name} className="bingo-board-item-success">
+                <span className="bingo-name-title">{word.name}</span>
+              </div>
+            : <div key={word.name} className="bingo-board-item"></div>
+            
           ))}
-        </div>
-     </div>
-    </div>
-
-);
+          </div>
+          <div className="bingo-checklist">
+            {bingoWords.map((word) => (
+              <div key={word} className="bingo-checklist-item">
+                <input type="checkbox" onClick={() => handleCheck(word)} />
+                <label>{word}</label>
+              </div>
+            ))}
+          </div>
+      </div>
+      </div>
+    </>
+  );
 };
 
 
