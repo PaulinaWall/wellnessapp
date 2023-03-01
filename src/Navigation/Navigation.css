@@ -2,6 +2,8 @@
     display: flex;
     min-width: 500px;
     margin-left: 130px;
+    margin-block: 0;
+    line-height: 108px;
 
     list-style-type: none;
     padding: 0;
@@ -11,6 +13,7 @@
     cursor: pointer;
     color: #657286;
     font-weight: 600;
+    font-size: 14px;
     margin-right: 32px;
 }
 
@@ -21,8 +24,7 @@
 .header {
     display: flex;
     justify-content: space-between;
-    max-height: 76px;
-    margin: 36px 40px 0;
+    height: 76px;
 
     border-bottom: 1px solid #C9D0DB;
 }
@@ -33,4 +35,14 @@
 
 .header img {
     cursor: pointer;
+}
+
+.eletive-logo {
+    margin-top: 32px;
+    height: 32px;
+}
+
+.current-user-logo {
+    height: 22px;
+    margin-top: 40px;
 }

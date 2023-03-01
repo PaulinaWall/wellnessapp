@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
 import './App.css';
 import { Navigation } from './Navigation/Navigation';
+import { Competitions } from './Competitions/Competitions';
+import { WellnessBingo } from './WellnessBingo/WellnessBingo';
+import { Achievements } from './Achievements/Achievements';
 
 function App() {
   const [activeNavigation, setActiveNavigation] = useState(1);
   const navigationItems = [
     { id: 1, name: 'Start page' },
     { id: 2, name: 'Competitions' },
-    { id: 3, name: 'Wellness-bingo' },
+    { id: 3, name: 'Wellness bingo' },
+    { id: 4, name: 'Achievements' },
   ];
 
   return (
@@ -19,9 +23,10 @@ function App() {
       />
 
       {activeNavigation === 1 && <div>Start Page</div>}
-      {activeNavigation === 2 && <div>Competitions</div>}
-      {activeNavigation === 3 && <div>Wellness-Bingo</div>}
-      {activeNavigation === 4 && <div>Profile Page</div>}
+      {activeNavigation === 2 && <Competitions />}
+      {activeNavigation === 3 && <WellnessBingo />}
+      {activeNavigation === 4 && <Achievements />}
+      {activeNavigation === 5 && <div>Profile Page</div>}
     </div>
   );
 }
