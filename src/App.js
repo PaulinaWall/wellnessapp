@@ -4,6 +4,7 @@ import { Navigation } from './Navigation/Navigation';
 import { Competitions } from './Competitions/Competitions';
 import { WellnessBingo } from './WellnessBingo/WellnessBingo';
 import { Achievements } from './Achievements/Achievements';
+import { StartPage } from './Pages/StartPage/StartPage';
 
 function App() {
   const [activeNavigation, setActiveNavigation] = useState(1);
@@ -27,6 +28,10 @@ function App() {
       {activeNavigation === 3 && <WellnessBingo />}
       {activeNavigation === 4 && <Achievements />}
       {activeNavigation === 5 && <div>Profile Page</div>}
+      {activeNavigation === 1 && <StartPage />}
+      {activeNavigation === 2 && <div>Competitions</div>}
+      {activeNavigation === 3 && <div>Wellness-Bingo</div>}
+      {activeNavigation === 4 && <div>Profile Page</div>}
     </div>
   );
 }
