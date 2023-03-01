@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import ConfettiExplosion from 'react-confetti-explosion';
 
 import { PageHeader } from '../../Common/PageHeader/PageHeader';
 import "./WellnessBingo.css";
 
 export const WellnessBingo = () => {
+
   const bingoWords = [
     "Cook a healthy meal",
     "Do a workout",
@@ -24,14 +26,14 @@ export const WellnessBingo = () => {
   ];
 
   let shuffledWords = [
-    {name: "meditate", checked: false},
+    {name: "meditate", checked: true},
     {name: "Give a positive feedback to a colleague", checked: false},
-    {name: "Take a break and listen to some music", checked: false},
+    {name: "Take a break and listen to some music", checked: true},
     {name: "Cook a healthy meal", checked: false},
-    {name: "Read a chapter in your book", checked: false},
+    {name: "Read a chapter in your book", checked: true},
     {name: "Do a workout", checked: false},
     {name: "Use the gym at the office", checked: false},
-    {name: "Treat yourself with something nice", checked: false},
+    {name: "Treat yourself with something nice", checked: true},
     {name: "Do some Yoga", checked: false},
     {name: "Go to the seaside", checked: false},
     {name: "Call a friend you haven’t talked to in a long time", checked: false},
@@ -45,8 +47,20 @@ export const WellnessBingo = () => {
 
   const handleCheck = (word) => {
    let current = words.find((w) => w.name === word);
-    current.checked = !current.checked;
+   current.checked = !current.checked;
    setWords([...words])
+  };
+
+  const doSomeYoga = words.find((word) => word.name === 'Do some Yoga');
+  const isBingo = doSomeYoga.checked === true;
+  var colors = ['#40C887', '#97a7ff', '#ffac9c'];
+
+  const confettiProps = {
+    force: 0.8,
+    duration: 3000,
+    particleCount: 250,
+    width: 1600,
+    colors,
   };
 
   return (
@@ -56,27 +70,29 @@ export const WellnessBingo = () => {
         description="Complete the assignment and try to get bingo"
       />
       <div className="container">
+        {isBingo && <ConfettiExplosion {...confettiProps} />}
       
-      <div className="bingo-container">
+        <div className="bingo-container">
           <div className="bingo-board">
-          {words.map((word) => (
-            word.checked
-            ? <div key={word.name} className="bingo-board-item-success">
-                <span className="bingo-name-title">{word.name}</span>
-              </div>
-            : <div key={word.name} className="bingo-board-item"></div>
-            
-          ))}
+            {words.map((word) => (
+              word.checked
+              ? <div key={word.name} className="bingo-board-item-success">
+                  <span className="bingo-name-title">{word.name}</span>
+                </div>
+              : <div key={word.name} className="bingo-board-item"></div>
+              
+            ))}
           </div>
           <div className="bingo-checklist">
             {bingoWords.map((word) => (
               <div key={word} className="bingo-checklist-item">
-                <input type="checkbox" onClick={() => handleCheck(word)} />
+                <input type="checkbox" checked={words.find((w) => w.name === word).checked} onChange={() => handleCheck(word)} />
                 <label>{word}</label>
               </div>
             ))}
           </div>
-      </div>
+        </div>
+        {isBingo && <ConfettiExplosion {...confettiProps} />}
       </div>
     </>
   );

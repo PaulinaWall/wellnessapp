@@ -4,10 +4,6 @@
   align-items: center;
 }
 
-.bingo-container {
-
-}
-
 .bingo-board {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -36,6 +32,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 
   width: 200px;
   height: 150px;
@@ -43,9 +40,6 @@
   background:#40C887;
   border-radius: 16px;
   padding: 10px;
-}
-
-.bingo-name-title {
 }
 
 .bingo-checklist {
@@ -63,6 +57,7 @@
 }
 
 input[type="checkbox"] {
+  cursor: pointer;
   appearance: none;
   background-color: #fff;
   margin: 0;
