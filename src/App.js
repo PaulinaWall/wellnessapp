@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import { Navigation } from './Navigation/Navigation';
 
 function App() {
+  const [activeNavigation, setActiveNavigation] = useState(1);
+  const navigationItems = [
+    { id: 1, name: 'Start page' },
+    { id: 2, name: 'Competitions' },
+    { id: 3, name: 'Wellness-bingo' },
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navigation
+        activeItem={activeNavigation}
+        items={navigationItems}
+        onItemChange={((id) => setActiveNavigation(id))}
+      />
+
+      {activeNavigation === 1 && <div>Start Page</div>}
+      {activeNavigation === 2 && <div>Competitions</div>}
+      {activeNavigation === 3 && <div>Wellness-Bingo</div>}
+      {activeNavigation === 4 && <div>Profile Page</div>}
     </div>
   );
 }

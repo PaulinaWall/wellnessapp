@@ -1,0 +1,36 @@
+.navigation-list {
+    display: flex;
+    min-width: 500px;
+    margin-left: 130px;
+
+    list-style-type: none;
+    padding: 0;
+}
+
+.list-item {
+    cursor: pointer;
+    color: #657286;
+    font-weight: 600;
+    margin-right: 32px;
+}
+
+.active {
+    border-bottom: 2px solid #40C887;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    max-height: 76px;
+    margin: 36px 40px 0;
+
+    border-bottom: 1px solid #C9D0DB;
+}
+
+.header-left-section {
+    display: flex;
+}
+
+.header img {
+    cursor: pointer;
+}
