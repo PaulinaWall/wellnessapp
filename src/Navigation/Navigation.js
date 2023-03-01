@@ -18,7 +18,7 @@ export const Navigation = ({
 					{
 						items.map(({ name, id }) => {
 							const isActive = id === activeItem;
-							console.log(id, activeItem)
+							// console.log(id, activeItem)
 							return	(
 								<li
 									className={
